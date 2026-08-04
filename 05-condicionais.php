@@ -13,7 +13,7 @@
             padding: 5px;
             border-radius: 2px;
         }
-        
+
         </style>
 </head>
 <body>
@@ -53,15 +53,34 @@
     <?php 
     if($qtdEmEstoque < $qtdCritica) {
         echo "<p style='color: red;'>É necessario comprar/repor</p>";
+        //condicional aninhada
+        if($qtdEmEstoque  === 0) echo "<p><mark class='comprar'>🚨Urgente</mark></p>";
     
     } else {
         echo "<p>Estoque normal</p>";
     }
 
-    if($qtdEmEstoque  === 0){
-        echo "<p><mark class='comprar'>🚨Urgente</mark></p>";
-    }
     ?>
+    
+    <hr>
+    <h2>Condicional encadeada</h2>
 
+    <?php 
+    $idade = 15;
+    
+    if($idade <=12){
+        $situacao = "criança";
+
+    } elseif($idade <= 17){
+        $situacao = "adolescente";
+
+    } elseif($idade <= 59){
+        $situacao = "adulto";
+
+    } else {
+        $situacao = "idoso";
+    }
+
+    ?>
 </body>
 </html>
