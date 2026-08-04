@@ -92,12 +92,15 @@
     // Prototipo chatbot
     //opções: 1 (informaçoes), 2 (reclamação), 3 (elogio), x (invalida)
     $opcao = 1; // input simulado
+    
     switch($opcao){
-        case 1: echo "<p>Legal, o que quer saber?</p>"; break;
-        case 2: echo "<p>Que pena, o que houve?</p>"; break;
-        case 3: echo "<p>Que bacana, pode falar!</p>"; break;
-        default: echo "<p>Não entendi... vou te encaminhar para um especialista</p>";
+        case 1: $texto ="Legal, o que quer saber?"; break;
+        case 2: $texto ="Que pena, o que houve?"; break;
+        case 3: $texto ="Que bacana, pode falar!"; break;
+        default: $texto ="Não entendi... vou te encaminhar para um especialista";
     }
     ?>
+
+    <p><?= $texto ?></p>
 </body>
 </html>
