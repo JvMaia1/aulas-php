@@ -66,8 +66,10 @@
     <h2>Condicional encadeada</h2>
 
     <?php 
+    $excessoDeEstoque = $qtdEmEstoque > 100 ? "Sim" : "Não";
+
     $idade = 15;
-    
+
     if($idade <=12){
         $situacao = "criança";
 
@@ -81,6 +83,21 @@
         $situacao = "idoso";
     }
 
+    ?>
+    
+    <p>O usuário tem <?= $idade ?> e é <?= $situacao ?></p>
+    <h2>Usando os comandos <code>switch/case/default/break</code></h2>
+
+    <?php 
+    // Prototipo chatbot
+    //opções: 1 (informaçoes), 2 (reclamação), 3 (elogio), x (invalida)
+    $opcao = 1; // input simulado
+    switch($opcao){
+        case 1: echo "<p>Legal, o que quer saber?</p>"; break;
+        case 2: echo "<p>Que pena, o que houve?</p>"; break;
+        case 3: echo "<p>Que bacana, pode falar!</p>"; break;
+        default: echo "<p>Não entendi... vou te encaminhar para um especialista</p>";
+    }
     ?>
 </body>
 </html>
