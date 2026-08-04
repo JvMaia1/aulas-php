@@ -65,5 +65,20 @@ if($temCupom):
     <p id="nao-tem" class="tem-desconto">Sem desconto!</p>
 <?php endif;?>
 
+<hr>
+<h2>Operador não/negação/not (!)</h2>
+<p>Inverte a lógica, se algo for verdadeiro é lido como falso</p>
+
+<?php 
+/* Se o usuário não estiver logado, moetre o link de login.
+caso contrario exibir uma saudação */
+$usuarioLogado = false;
+if(!$usuarioLogado):
+?>
+    <a style="text-decoration: none;" href="#">Logar agora</a>
+<?php else: ?>
+    <p>Bem vindo usuário!</p>
+<?php endif; ?>
+
 </body>
 </html>
