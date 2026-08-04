@@ -10,7 +10,9 @@
     <hr>
     <h2>Condicional simples: <code>if</code></h2>
     <?php 
+    
     $numero = 50;
+    
     if($numero > 10){
         echo "<p>$numero é maior que 10</p>";
     }
@@ -21,6 +23,29 @@
         echo "<p>$numero é maior que 10</p>"; 
     endif;
 
+    
+    
+    ?>
+    
+    <h2>Condicional composta <code>If/else</code></h2>
+    
+    <?php 
+    $produto = "Ultrabook";
+    $qtdEmEstoque = 30;
+    $qtdCritica = 5;
+    
+    
+    ?>
+    <h3><?= $produto ?></h3>
+    <p><b>Quantidade em estoque: </b><?= $qtdEmEstoque ?></p>
+
+    <?php 
+    if($qtdEmEstoque < $qtdCritica) {
+        echo "<p style='color: red;'>É necessario comprar/repor</p>";
+    
+    } else {
+        echo "<p>Estoque normal</p>";
+    }
     ?>
 
 </body>
