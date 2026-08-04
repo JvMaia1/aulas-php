@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP - Condicionais</title>
+    <style>
+        .comprar{
+            color: red;
+        }
+        
+        mark{
+            padding: 5px;
+            border-radius: 2px;
+        }
+        
+        </style>
 </head>
 <body>
     <h1>Trabalhando com estruturas condicionais</h1>
@@ -31,7 +42,7 @@
     
     <?php 
     $produto = "Ultrabook";
-    $qtdEmEstoque = 30;
+    $qtdEmEstoque = 0;
     $qtdCritica = 5;
     
     
@@ -45,6 +56,10 @@
     
     } else {
         echo "<p>Estoque normal</p>";
+    }
+
+    if($qtdEmEstoque  === 0){
+        echo "<p><mark class='comprar'>🚨Urgente</mark></p>";
     }
     ?>
 
