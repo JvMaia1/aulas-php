@@ -30,17 +30,14 @@ function checarCategoria(int $idade): string{
 
         .card#idoso{
             background-color: wheat;
-
         }
         
         .card#adulto{
             background-color: green;
-
         }
 
         .card#infantil{
             background-color: aliceblue;
-
         }
     </style>
 </head>
