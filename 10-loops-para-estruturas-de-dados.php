@@ -10,6 +10,16 @@
         "carga_horario" => 200,
         "descricao" => "aprender o básico sobre cozinha"
     ];
+    $clientes = [
+        [
+            'nome' => "Juliene",
+            'email' => 'juliene@gmail.com'
+        ],
+        [
+            'nome' => "Juliano",
+            'email' => 'juliano@gmail.com'
+        ]
+    ];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -61,6 +71,16 @@
             <p><b><?= $chave ?></b>: <?= $valor ?></p>
         <?php endforeach; ?>
         
+        <h2>usando foreach em array associativo</h2>
+        <hr>
+        <?php 
+        foreach($clientes as $cliente):
+        ?>
+            <div class="">
+                <p>Nome: <?= $cliente['nome'] ?></p>
+                <p>Email: <?= $cliente['email'] ?></p>
+            </div>
+        <?php endforeach; ?>
     </div>
 </body>
 </html>
