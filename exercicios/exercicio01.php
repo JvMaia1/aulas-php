@@ -1,33 +1,25 @@
-<?php 
-$data = "29/07/26";
-$nome = "Cleisson";
-const CURSO = "Designer UX/UI";
-const CURSO2 = "IA avançada";
+<?php
+$data = '29/07/26';
+$nome = 'Cleisson';
+const CURSO = 'Designer UX/UI';
+const CURSO2 = 'IA avançada';
 const CARGA = 500;
-$limiteFaltas = CARGA/4;
+$limiteFaltas = CARGA / 4;
+$css_interno = "
+    .deco{
+        background-color: beige;
+        padding: 5px;
+        border: black solid 5px;
+        text-align: center;
+        transform: scale(0.9);
+        &:hover{ transform: scale(1) }
+    }
+    "
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>                          
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 01</title>
-    <style>
-        .deco{
-            background-color: beige;
-            padding: 5px;
-            border: black solid 5px;
-            text-align: center;
-            transform: scale(0.9);
-            &:hover{ transform: scale(1) }
-        }
-    </style>
-</head>
+<?php include('../components/header.php'); ?>
 <body>
-    <header>
-        <h1 style="color: red">Exercicio 01</h1>
-        <hr>
-    </header>
+    <h1 style="color: red">Exercicio 01</h1>
+    <hr>
     <main class="deco">
         <p><?= $data ?></p>
         <p>Nome: <?= $nome ?></p>

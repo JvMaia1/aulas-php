@@ -12,22 +12,14 @@ $mapaNomes = [
     'css' => 'CSS',
     'javascript' => 'JavaScript',
     'php' => 'PHP',
-    'mysql' => 'MySql',
+    'mysql' => 'MySql'
 ];
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio 4</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
+<?php include('components/header.php'); ?>
 <body class="bg-body-tertiary">
-    <header class="bg-dark-subtle">
-        <h1 class="p-5">Estruturas de repetição (loops) e estruturas de dados</h1>
-        <hr>
-    </header>
+    <h1 class="p-5">Estruturas de repetição (loops) e estruturas de dados</h1>
+    <hr>
+
     <main class="container">
         <table class="table table-secondary">
             <thead>
@@ -37,24 +29,20 @@ $mapaNomes = [
                 <th scope="col">Descrição</th>
             </tr>
         </thead>
-        <?php 
-            $i = 0;
-            foreach($linguagens as $nome => $descricao):
-        ?>
+        <?php
+        $i = 0;
+        foreach ($linguagens as $nome => $descricao): ?>
 
         <tbody>
             <tr>
-                <th  class="table-dark" scope="row"><?= $i+1 ?></th>
+                <th  class="table-dark" scope="row"><?= $i + 1 ?></th>
                 <td  class="table-dark px-3"><?= $mapaNomes[$nome] ?></td>
                 <td><?= $descricao ?></td>
             </tr>
         </tbody>
-        <?php 
-            $i++;
-            endforeach;
+        <?php $i++;endforeach;
         ?>
         </table>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </main>
 </body>
 </html>
