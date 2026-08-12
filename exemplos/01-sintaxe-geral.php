@@ -7,7 +7,7 @@
     "
 ?>
 
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <body>
     <h1>Trabalhando com PHP</h1>
     <hr>

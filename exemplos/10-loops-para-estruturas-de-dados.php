@@ -21,7 +21,7 @@ $clientes = [
     ]
 ];
 ?>
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <body>
     <div class="container">
         <h1>Loops para estruturas de dados</h1>

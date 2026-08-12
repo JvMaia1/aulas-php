@@ -1,4 +1,4 @@
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <body>
     <div class="container">
         <h1>Trabalhando com comandos de repetição</h1>

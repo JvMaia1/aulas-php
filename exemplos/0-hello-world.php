@@ -1,4 +1,4 @@
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <body>
 <?php echo "Hello world \n"; ?>
     

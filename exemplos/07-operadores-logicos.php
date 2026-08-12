@@ -15,7 +15,7 @@
         }
     "
 ?>
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <body>
     <h1>Operadores lógicos</h1>
     <hr>

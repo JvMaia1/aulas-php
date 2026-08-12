@@ -12,7 +12,7 @@ const EMPRESA = 'XPTO';
 
 // moderna
 ?>
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <body>
     <h1>Usando variáveis e constantes</h1>
     <hr>

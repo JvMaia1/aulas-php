@@ -1,4 +1,4 @@
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <body>
     <h1>Trabalhando com objetos/instâncias</h1>
     <hr>
