@@ -15,7 +15,7 @@ $mapaNomes = [
     'mysql' => 'MySql'
 ];
 ?>
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <body class="bg-body-tertiary">
     <h1 class="p-5">Estruturas de repetição (loops) e estruturas de dados</h1>
     <hr>

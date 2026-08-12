@@ -15,8 +15,7 @@ function checarCategoria(int $idade): string
         return 'idoso';
     }
 }
-?>
-<?php $css_interno = "
+$css_interno = "
     .card{
         padding: 1rem;
         border-radius: 5px;
@@ -36,7 +35,7 @@ function checarCategoria(int $idade): string
     }
 "
 ?>
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <body>
     <h1>Exercicio 03</h1>
     <hr>

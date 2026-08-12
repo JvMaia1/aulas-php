@@ -16,8 +16,7 @@ $usuario2 = [
     'sexo' => 'Masculino',
     'cidade' => 'Santa catarina'
 ];
-?>
-<?php $css_interno = "
+$css_interno = "
     main{
         display: flex;
         justify-content: space-around;
@@ -37,7 +36,7 @@ $usuario2 = [
     }
 "
 ?>
-<?php include('components/header.php'); ?>
+<?php include('../components/header.php'); ?>
 <body>
     <h1>Exercicio 02</h1>
     <hr>
