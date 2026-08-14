@@ -1,0 +1,25 @@
+{
+  "name": "aulas-php",
+  "version": "1.0.0",
+  "description": "Neste projeto, estamos estudando a **linguagem PHP**.",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"*.php\" \"exercicios/*.php\"",
+    "format:check": "prettier --check \"*.php\" \"exercicios/*.php\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JvMaia1/aulas-php.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JvMaia1/aulas-php/issues"
+  },
+  "homepage": "https://github.com/JvMaia1/aulas-php#readme",
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.25.0",
+    "prettier": "^3.9.6"
+  }
+}
