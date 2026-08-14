@@ -7,7 +7,7 @@ $alunos = [
     'abud' => [5, 8, 10]
 ];
 
-function calcularMedia(array $notas): float
+function calcularMedia(array $notas):float
 {
     $total = 0;
     $qtdNotas = count($notas);
@@ -36,12 +36,13 @@ function verificarSituacao(float $media): string
     <?php 
     foreach ($alunos as $aluno => $notas):
         $classe = 'bg-danger p-3';
-        $situacao = verificarSituacao(calcularMedia($notas)) ;
+        $media = calcularMedia($notas);
+        $situacao = verificarSituacao($media) ;
         if($situacao ===  'aprovado'){
             $classe = 'bg-success p-3';
         };
     ?>
-    <p class="container <?=  $classe?>">O aluno: <?= $aluno ?> está <?= $situacao ?></p>
+    <p class="container <?=  $classe?>">O aluno: <?= $aluno ?> está <?= $situacao ?> com <?= $media ?> de média</p>
     <?php endforeach; ?>
     
     
