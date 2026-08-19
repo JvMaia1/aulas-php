@@ -18,11 +18,18 @@ $index = '../index.php';
     <title>Técnico em informatica para internet</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <?php if(isset($css_interno)): ?>
-      <style>
+    <style>
+      .card-escuro {
+        background-color: var(--bs-dark);
+        color: var(--bs-white);
+        padding: var(--bs-spacer-3);
+        padding-top: var(--bs-spacer-4);
+        border-radius: var(--bs-border-radius-3);
+      }
+      <?php if(isset($css_interno)): ?>
       <?= $css_interno ?>
-      </style>
       <?php endif ?>
+      </style>
 </head>
 
 <header>
