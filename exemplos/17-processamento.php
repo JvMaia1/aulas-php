@@ -3,11 +3,17 @@ $semDados = false;
 //listas de opçoes validas
 $interessesValidos = ['html', 'css', 'javascript'];
 $informativosValdos = ['sim', 'nao'];
+$filtroIdade = [
+    "options" => [
+        "max_range" => 0,
+        "min_range" => 130,
+    ]
+];
 $erros = [];
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     //captura os dados apenas se a requisição post for feita
-    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+    $nomeCompleto = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
     $mensagem = filter_input(INPUT_POST, 'mensagem', FILTER_SANITIZE_SPECIAL_CHARS);
 
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -17,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     
     $informativos = filter_input(INPUT_POST, 'informativos', FILTER_SANITIZE_SPECIAL_CHARS);
     $informativos = in_array($informativos, $informativosValdos) ? $informativos : 'nao';
-    
+
     if(!is_array($interesses)){
         $interesses = [];
         $erros[] = 'Seleção inválida de interesses';
@@ -26,6 +32,14 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $interessesValidados = array_intersect($interesses, $interessesValidos);
 
     } else {$semDados = true;}
+    foreach(compact([$nomeCompleto, $email, $mensagem]) as $campo => $valor){
+        if(empty($valor)){
+            $erros[] = "O {$campo} é obrigatorio";
+        };
+    };
+
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) $erros[] = 'O e-mail não é valido';
+    if(!filter_var($idade, FILTER_VALIDATE_INT, $filtroIdade)) $erros[] = 'A idade não é valida';
 ?>
 <?php include '../components/header.php'?>
 
@@ -44,7 +58,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         </ul>
         <?php endif; ?>
 
-        <p>Nome: <?= $nome ?></p>
+        <p>Nome: <?= $nomeCompleto ?></p>
         <p>Email: <?= $email ?></p>
         <p>Idade: <?= $idade ?> anos</p>
         <?php if(!empty($interessesValidados)):?>
