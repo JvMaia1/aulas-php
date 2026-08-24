@@ -60,6 +60,24 @@
         <p><?= $ataqueEvitado ?></p>
         <p><?= $nomeCompletoCorrigido ?></p>
 
+        <hr>
+        <h3>FILTER_SANITIZE_NUMBER_INT</h3>
+        <code>$idade = filter_var('Tenho 15 anos', FILTER_SANITIZE_NUMBER_INT);</code>
+        <p>Saida: <b class="text-success"><?= $idade = filter_var('Tenho 15 anos', FILTER_SANITIZE_NUMBER_INT); ?></b></p>
+
+        <h3>FILTER_SANITIZE_NUMBER_INT</h3>
+        <code>
+        $precoInicial = filter_var('R$ 1000.76', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION); 
+        <br><br>
+        $desconto = filter_var('R$ 500.40', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+        </code>
+        <br>
+
+        <p>Saida $precoInicial: <b class="text-success"><?= $precoInicial = filter_var('R$ 1000.76', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION); ?></b></p>
+
+        <p>Saida $desconto: <b class="text-success"><?= $desconto = filter_var('R$ 500.40', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION); ?></b></p>
+        
+
     </div>
 
 </main>
